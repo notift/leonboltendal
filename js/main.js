@@ -21,8 +21,8 @@
   /* ── Fade animaties ── */
   if (!prefersReducedMotion) {
 
-    // Foto + intro + manifesto header: staggered op load
-    document.querySelectorAll('.photo-header .fade, .intro-section .fade, .manifesto-header .fade').forEach(function (el, i) {
+    // Foto + intro + manifesto header + eerste sectie: staggered op load
+    document.querySelectorAll('.photo-header .fade, .intro-section .fade, .manifesto-header .fade, .manifesto-section:first-child .fade').forEach(function (el, i) {
       setTimeout(function () { el.classList.add('in'); }, 60 + i * 90);
     });
 
@@ -34,11 +34,9 @@
         setTimeout(function () { entry.target.classList.add('in'); }, delay);
         io.unobserve(entry.target);
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
-    document.querySelectorAll(
-      '.section .fade, .footer-section .fade, .manifesto-body .fade'
-    ).forEach(function (el) { io.observe(el); });
+    document.querySelectorAll('.fade:not(.in)').forEach(function (el) { io.observe(el); });
 
   } else {
     document.querySelectorAll('.fade').forEach(function (el) { el.classList.add('in'); });
