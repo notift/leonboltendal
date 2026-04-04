@@ -100,6 +100,7 @@ body {
   transform: translateX(-50%);
   margin-top: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .photo-header img {
@@ -546,10 +547,10 @@ footer {
 
 .contact-section .footer-inner {
   max-width: none;
-  width: calc(100% + 80px);
-  padding: 36px 40px 44px;
-  margin-left: -40px;
-  margin-right: -40px;
+  width: 100%;
+  padding: 36px 0 44px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .contact-grid {
@@ -704,6 +705,14 @@ footer {
 .fade.in {
   opacity: 1;
   transform: translateY(0);
+}
+
+.photo-header img.fade {
+  transform: translateY(16px) translateX(10px);
+}
+
+.photo-header img.fade.in {
+  transform: translateY(0) translateX(10px);
 }
 
 @media (prefers-reduced-motion: reduce) {
