@@ -21,8 +21,8 @@
   /* ── Fade animaties ── */
   if (!prefersReducedMotion) {
 
-    // Foto + intro: staggered op load
-    document.querySelectorAll('.photo-header .fade, .intro-section .fade').forEach(function (el, i) {
+    // Foto + intro + manifesto header: staggered op load
+    document.querySelectorAll('.photo-header .fade, .intro-section .fade, .manifesto-header .fade').forEach(function (el, i) {
       setTimeout(function () { el.classList.add('in'); }, 60 + i * 90);
     });
 
@@ -37,7 +37,7 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
 
     document.querySelectorAll(
-      '.section .fade, .footer-section .fade'
+      '.section .fade, .footer-section .fade, .manifesto-body .fade'
     ).forEach(function (el) { io.observe(el); });
 
   } else {

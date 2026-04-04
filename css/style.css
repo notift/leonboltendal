@@ -623,10 +623,14 @@ footer {
 }
 
 .contact-embed {
-  border: 1px solid var(--border);
+  border: 1px solid purple;
   border-radius: 10px;
   overflow: clip;
-  background: white;
+  background: red; /* was: white */
+}
+
+.contact-embed iframe {
+  width: 100% !important;
 }
 
 
