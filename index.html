@@ -18,7 +18,6 @@
   <meta property="og:image:width" content="1792">
   <meta property="og:image:height" content="1024">
   <meta property="og:site_name" content="Leon Boltendal">
-  <meta property="og:logo" content="https://leonboltendal.nl/assets/favicon.png">
   <meta property="og:locale" content="nl_NL">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Leon Boltendal | AI Consultant">
@@ -27,7 +26,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
@@ -51,6 +49,10 @@
   </script>
 </head>
 <body>
+
+<a href="#werk" class="skip-link">Naar inhoud</a>
+
+<main>
 
 <!-- ══ INTRO ══════════════════════════════ -->
 <div class="intro-section" id="top">
@@ -84,7 +86,6 @@
     src="assets/og-image.jpg"
     alt="Leon Boltendal"
     class="fade"
-    loading="eager"
   >
 </div>
 
@@ -217,6 +218,7 @@
       <div class="stack-pill"><img src="assets/logos/claude.svg" alt="Claude" class="stack-logo"> Claude</div>
       <div class="stack-pill"><img src="assets/logos/chatgpt.svg" alt="ChatGPT" class="stack-logo"> ChatGPT</div>
       <div class="stack-pill"><img src="assets/logos/gemini.svg" alt="Gemini" class="stack-logo"> Gemini</div>
+      <div class="stack-pill"><img src="assets/logos/notion.svg" alt="Notion" class="stack-logo"> Notion</div>
       <div class="stack-pill"><img src="assets/logos/n8n.svg" alt="N8N" class="stack-logo"> N8N</div>
       <div class="stack-pill"><img src="assets/logos/make.svg" alt="Make.com" class="stack-logo"> Make</div>
       <div class="stack-pill"><img src="assets/logos/vapi.svg" alt="Vapi" class="stack-logo"> Vapi</div>
@@ -229,6 +231,7 @@
   </div>
 </section>
 
+</main>
 
 <!-- ══ CONTACT ══════════════════════════════ -->
 <section id="contact" class="section contact-section" style="background-image: url('assets/background-mountains.jpeg');">
@@ -262,9 +265,8 @@
       </div>
     </div>
 
-      <!-- Cal inline embed code begins -->
-      <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-introductie-gesprek"></div>
-      <!-- Cal inline embed code ends -->
+      <!-- Cal inline embed -->
+      <div style="width:100%;height:100%;overflow:auto" id="my-cal-inline-introductie-gesprek"></div>
 
     </div>
 
@@ -288,7 +290,7 @@
 
 <!-- ══ SCRIPTS ══════════════════════════════ -->
 
-<!-- Cal inline embed code begins -->
+<!-- Cal inline embed -->
 <script type="text/javascript">
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", "introductie-gesprek", {origin:"https://app.cal.com"});
@@ -301,14 +303,13 @@
 
   Cal.ns["introductie-gesprek"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#6AAE7A"},"dark":{"cal-brand":"#6AAE7A"}},"hideEventTypeDetails":true,"layout":"month_view"});
 </script>
-<!-- Cal inline embed code ends -->
 
 <script src="js/main.js" defer></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const year = new Date().getFullYear();
-    const yearContact = document.getElementById('year-contact');
+    var year = new Date().getFullYear();
+    var yearContact = document.getElementById('year-contact');
     if (yearContact) yearContact.textContent = year;
   });
 </script>

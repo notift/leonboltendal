@@ -5,29 +5,16 @@
 (function () {
   'use strict';
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* ── Nav scroll state ── */
-  const nav = document.querySelector('.nav');
-
-  if (nav) {
-    function updateNav() {
-      nav.classList.toggle('scrolled', window.scrollY > 32);
-    }
-    window.addEventListener('scroll', updateNav, { passive: true });
-    updateNav();
-  }
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ── Fade animaties ── */
   if (!prefersReducedMotion) {
 
-    // Foto + intro + manifesto header + eerste sectie: staggered op load
     document.querySelectorAll('.photo-header .fade, .intro-section .fade, .manifesto-header .fade, .manifesto-section:first-child .fade').forEach(function (el, i) {
       setTimeout(function () { el.classList.add('in'); }, 60 + i * 90);
     });
 
-    // Alle overige .fade elementen: op scroll
-    const io = new IntersectionObserver(function (entries) {
+    var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var delay = parseInt(entry.target.dataset.delay || 0);

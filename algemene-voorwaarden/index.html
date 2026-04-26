@@ -17,158 +17,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../css/style.css">
-
-  <style>
-    .av-header {
-      padding: 120px 0 48px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .av-header-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
-    .av-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--stone);
-      text-decoration: none;
-      margin-bottom: 32px;
-      transition: color 0.2s;
-    }
-
-    .av-back:hover { color: var(--ink); }
-
-    .av-title {
-      font-size: clamp(28px, 5vw, 40px);
-      font-weight: 300;
-      letter-spacing: -0.8px;
-      color: var(--ink);
-      margin-bottom: 12px;
-    }
-
-    .av-meta {
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--stone-light);
-    }
-
-    .av-body {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
-    .av-article {
-      padding: 36px 0;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .av-article:last-child { border-bottom: none; }
-
-    .av-article-title {
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--pistache);
-      letter-spacing: -0.01em;
-      margin-bottom: 12px;
-    }
-
-    .av-article-num {
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      color: var(--stone-light);
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .av-article p {
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--stone);
-      line-height: 1.85;
-      margin-bottom: 10px;
-    }
-
-    .av-article p:last-child { margin-bottom: 0; }
-
-    .av-article ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .av-article ul li {
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--stone);
-      line-height: 1.75;
-      padding-left: 16px;
-      position: relative;
-    }
-
-    .av-article ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 10px;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--border);
-    }
-
-    .av-footer {
-      padding: 48px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .av-footer {
-      padding: 80px 0 0 0;
-      position: relative;
-      background-image: url('../assets/background-mountains.jpeg');
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: scroll;
-    }
-
-    .av-footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background:
-        linear-gradient(to bottom, rgba(251, 252, 250, 1) 0%, rgba(251, 252, 250, 0) 40%),
-        radial-gradient(ellipse at center, rgba(251, 252, 250, 1) 0%, rgba(251, 252, 250, 0.7) 70%, rgba(251, 252, 250, 0.1) 100%),
-        linear-gradient(to top, rgba(250, 252, 250, 0.7) 0%, rgba(250, 252, 250, 0.8) 50%, rgba(250, 252, 250, 0.85) 100%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .av-footer > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    @media (max-width: 700px) {
-      .av-header-inner { padding: 0 24px; }
-      .av-body { padding: 0 24px; }
-    }
-  </style>
 </head>
 <body>
+
+<a href="#av-content" class="skip-link">Naar inhoud</a>
 
 <!-- ══ HEADER ══════════════════════════════ -->
 <div class="av-header">
@@ -181,6 +33,7 @@
 
 
 <!-- ══ INHOUD ══════════════════════════════ -->
+<main id="av-content">
 <div style="padding: 0 0 32px;">
 <div class="av-body">
 
@@ -359,19 +212,20 @@
 
 </div>
 </div>
+</main>
 
-    <div class="footer-inner" style="margin-top: 0; padding-top: 20px; padding-bottom: 20px;">
-      <span class="footer-name">© <span id="year-contact" style="color: inherit;"></span> Leon Boltendal</span>
-      <div class="footer-mid">
-        <a href="/manifesto">Manifesto</a>
-        <div class="dot" aria-hidden="true"></div>
-        <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
-      </div>
-      <div class="footer-socials">
-        <a href="https://www.linkedin.com/in/leonboltendal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://notift.nl" target="_blank" rel="noopener noreferrer">Notift →</a>
-      </div>
-    </div>
+<div class="footer-inner" style="margin-top: 0; padding-top: 20px; padding-bottom: 20px;">
+  <span class="footer-name">© <span id="year-contact" style="color: inherit;"></span> Leon Boltendal</span>
+  <div class="footer-mid">
+    <a href="/manifesto">Manifesto</a>
+    <div class="dot" aria-hidden="true"></div>
+    <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
+  </div>
+  <div class="footer-socials">
+    <a href="https://www.linkedin.com/in/leonboltendal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://notift.nl" target="_blank" rel="noopener noreferrer">Notift →</a>
+  </div>
+</div>
 
 <script src="../js/main.js" defer></script>
 <script>
