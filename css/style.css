@@ -28,10 +28,13 @@ html { scroll-behavior: smooth; }
 .skip-link {
   position: absolute;
   left: -9999px;
-  top: auto;
+  top: -9999px;
   width: 1px;
   height: 1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
   font-size: 14px;
   padding: 8px 16px;
   background: var(--bg);
@@ -46,6 +49,9 @@ html { scroll-behavior: smooth; }
   left: 12px;
   width: auto;
   height: auto;
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
   border: 1px solid var(--border);
   border-radius: 6px;
 }
