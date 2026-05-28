@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Notift Calls — Brandbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #D0D4D0;
+      padding: 48px 24px;
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 794px;
+      min-height: 1123px;
+      background: #FAFCFA;
+      border: 1px solid #E5EDE5;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── SHARED ── */
+    .section-label {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #6AAE7A;
+      margin-bottom: 24px;
+    }
+
+    /* ══════════════════════════════
+       PAGE 1
+    ══════════════════════════════ */
+
+    /* Hero header */
+    .p1-hero {
+      padding: 56px 64px 48px;
+      border-bottom: 1px solid #E5EDE5;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .p1-hero .hero-left {}
+
+    .p1-hero .page-label {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #6AAE7A;
+      margin-bottom: 32px;
+    }
+
+    .p1-hero .name-mark {
+      font-size: 72px;
+      font-weight: 300;
+      color: #0D0D0D;
+      line-height: 0.9;
+      letter-spacing: -3px;
+    }
+
+    .p1-hero .name-mark strong { font-weight: 500; }
+
+    .p1-hero .tagline {
+      font-size: 13px;
+      font-weight: 300;
+      color: #7A8A7A;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .p1-hero .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .p1-hero .pill {
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .pill-green { background: #EAF5EC; color: #2A6A3A; border: 1px solid #D0EDD8; }
+    .pill-outline { background: transparent; border: 1px solid #E5EDE5; color: #B0BCB0; }
+
+    .p1-hero .page-num {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #C0CCC0;
+      margin-top: 8px;
+    }
+
+    /* Color section */
+    .p1-colors {
+      padding: 40px 64px;
+      border-bottom: 1px solid #E5EDE5;
+    }
+
+    .colors-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .color-swatch { flex: 1; }
+
+    .swatch-block {
+      height: 64px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .swatch-name {
+      font-size: 11px;
+      font-weight: 500;
+      color: #0D0D0D;
+      margin-bottom: 2px;
+    }
+
+    .swatch-hex {
+      font-size: 10px;
+      font-weight: 300;
+      color: #9AA89A;
+      letter-spacing: 1px;
+      font-family: monospace;
+    }
+
+    .swatch-desc {
+      font-size: 10px;
+      font-weight: 300;
+      color: #C0CCC0;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* Type section */
+    .p1-type {
+      padding: 40px 64px;
+      flex: 1;
+    }
+
+    .type-row {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 20px;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid #F0F4F0;
+    }
+
+    .type-row:last-child { border-bottom: none; }
+
+    .type-meta .meta-name {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C0CCC0;
+    }
+
+    .type-meta .meta-spec {
+      font-size: 10px;
+      font-weight: 300;
+      color: #D0D8D0;
+      margin-top: 3px;
+      line-height: 1.5;
+    }
+
+    /* ══════════════════════════════
+       PAGE 2
+    ══════════════════════════════ */
+
+    .p2-header {
+      padding: 48px 64px 40px;
+      border-bottom: 1px solid #E5EDE5;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .p2-header h2 {
+      font-size: 32px;
+      font-weight: 300;
+      color: #0D0D0D;
+      letter-spacing: -1px;
+      line-height: 1.15;
+    }
+
+    .p2-header .page-num {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #C0CCC0;
+      margin-top: 4px;
+    }
+
+    /* Voice — list style like preview-leon */
+    .p2-voice {
+      padding: 40px 64px;
+      border-bottom: 1px solid #E5EDE5;
+    }
+
+    .voice-list { display: flex; flex-direction: column; }
+
+    .voice-row {
+      display: grid;
+      grid-template-columns: 16px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 14px 0;
+      border-bottom: 1px solid #F0F4F0;
+    }
+
+    .voice-row:last-child { border-bottom: none; }
+
+    .voice-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #6AAE7A;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .voice-title {
+      font-size: 13px;
+      font-weight: 400;
+      color: #0D0D0D;
+      margin-bottom: 3px;
+    }
+
+    .voice-text {
+      font-size: 12px;
+      font-weight: 300;
+      color: #7A8A7A;
+      line-height: 1.65;
+    }
+
+    /* Menselijke details */
+    .p2-details {
+      padding: 40px 64px;
+      border-bottom: 1px solid #E5EDE5;
+    }
+
+    .details-list { display: flex; flex-direction: column; gap: 0; }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: 16px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #F8FAF8;
+    }
+
+    .detail-row:last-child { border-bottom: none; }
+
+    .detail-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #D0DCD0;
+      flex-shrink: 0;
+    }
+
+    .detail-text {
+      font-size: 12px;
+      font-weight: 300;
+      color: #5A6A5A;
+      line-height: 1.5;
+    }
+
+    /* Visual elements */
+    .p2-elements {
+      padding: 36px 64px;
+      border-bottom: 1px solid #E5EDE5;
+    }
+
+    .elements-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .el-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .el-demo {
+      height: 60px;
+      background: #F4F6F4;
+      border-radius: 8px;
+      border: 1px solid #E5EDE5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .el-name {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C0CCC0;
+    }
+
+    /* Bridge card — from preview-leon */
+    .p2-bridge {
+      padding: 32px 64px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .bridge-card {
+      background: #F4F6F4;
+      border: 1px solid #E5EDE5;
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .bridge-label {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #B0BCB0;
+      margin-bottom: 4px;
+    }
+
+    .bridge-title {
+      font-size: 16px;
+      font-weight: 400;
+      color: #0D0D0D;
+      margin-bottom: 3px;
+    }
+
+    .bridge-desc {
+      font-size: 12px;
+      font-weight: 300;
+      color: #7A8A7A;
+    }
+
+    .bridge-arrow {
+      font-size: 18px;
+      color: #6AAE7A;
+      flex-shrink: 0;
+    }
+
+    /* Dark tagline footer */
+    .tagline-section {
+      background: #0D0D0D;
+      padding: 40px 64px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tagline-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(#1A2A1A 1px, transparent 1px),
+        linear-gradient(90deg, #1A2A1A 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    .tagline-section > * { position: relative; z-index: 1; }
+
+    .big-tagline {
+      font-size: 32px;
+      font-weight: 300;
+      color: #FAFCFA;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+
+    .big-tagline em { font-style: normal; color: #6AAE7A; }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .footer-name {
+      font-size: 12px;
+      font-weight: 300;
+      color: #3A4A3A;
+      margin-bottom: 4px;
+    }
+
+    .footer-page {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #2A3A2A;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ══ PAGE 1 ══ -->
+  <div class="page">
+
+    <div class="p1-hero">
+      <div class="hero-left">
+        <div class="page-label">Brandbook Notift Calls</div>
+        <div class="name-mark"><strong>Notift</strong> Calls</div>
+        <div class="tagline">AI Telefonist. Telefoon beantwoord, stoel bezet.</div>
+      </div>
+      <div class="hero-right">
+        <span class="pill pill-green">Live</span>
+        <span class="pill pill-outline">2026</span>
+        <div class="page-num">01 / 02</div>
+      </div>
+    </div>
+
+    <div class="p1-colors">
+      <div class="section-label">Kleurpalet</div>
+      <div class="colors-row">
+
+        <div class="color-swatch">
+          <div class="swatch-block" style="background:#6AAE7A;"></div>
+          <div class="swatch-name">Pistache</div>
+          <div class="swatch-hex">#6AAE7A</div>
+          <div class="swatch-desc">Enige accent. Spaarzaam gebruiken.</div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-block" style="background:#EAF5EC; border:1px solid #D8EDD8;"></div>
+          <div class="swatch-name">Pistache Licht</div>
+          <div class="swatch-hex">#EAF5EC</div>
+          <div class="swatch-desc">Pills en highlights.</div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-block" style="background:#2A6A3A;"></div>
+          <div class="swatch-name">Bos</div>
+          <div class="swatch-hex">#2A6A3A</div>
+          <div class="swatch-desc">Accent op donker vlak.</div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-block" style="background:#0D0D0D;"></div>
+          <div class="swatch-name">Inkt</div>
+          <div class="swatch-hex">#0D0D0D</div>
+          <div class="swatch-desc">Primaire tekst.</div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-block" style="background:#7A8A7A;"></div>
+          <div class="swatch-name">Steen</div>
+          <div class="swatch-hex">#7A8A7A</div>
+          <div class="swatch-desc">Body, subtitels.</div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-block" style="background:#FAFCFA; border:1px solid #E5EDE5;"></div>
+          <div class="swatch-name">Achtergrond</div>
+          <div class="swatch-hex">#FAFCFA</div>
+          <div class="swatch-desc">Altijd.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="p1-type">
+      <div class="section-label">Typografie — Outfit</div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="meta-name">Display</div>
+          <div class="meta-spec">300 / 58px / -2px</div>
+        </div>
+        <span style="font-size:46px;font-weight:300;color:#0D0D0D;letter-spacing:-2px;line-height:1;"><strong style="font-weight:500;">Notift</strong> Calls</span>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="meta-name">Heading</div>
+          <div class="meta-spec">300 / 24px / -0.5px</div>
+        </div>
+        <span style="font-size:22px;font-weight:300;color:#0D0D0D;letter-spacing:-0.5px;">Telefoon beantwoord, stoel bezet.</span>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="meta-name">Label</div>
+          <div class="meta-spec">400 / 10px / +5px</div>
+        </div>
+        <span style="font-size:10px;font-weight:400;color:#6AAE7A;letter-spacing:5px;text-transform:uppercase;">AI Telefonist</span>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="meta-name">Body</div>
+          <div class="meta-spec">300 / 14px / 1.8</div>
+        </div>
+        <span style="font-size:14px;font-weight:300;color:#7A8A7A;line-height:1.8;">Geen gemiste klant. Geen lege stoel. Geen telefoon in je knippende hand.</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ══ PAGE 2 ══ -->
+  <div class="page">
+
+    <div class="p2-header">
+      <div>
+        <div class="section-label">Tone of Voice & Elementen</div>
+        <h2>Hoe Notift Calls<br>communiceert.</h2>
+      </div>
+      <div class="page-num">02 / 02</div>
+    </div>
+
+    <!-- Voice -->
+    <div class="p2-voice">
+      <div class="section-label">Stem</div>
+      <div class="voice-list">
+
+        <div class="voice-row">
+          <div class="voice-dot"></div>
+          <div>
+            <div class="voice-title">Direct</div>
+            <div class="voice-text">Geen omwegen. Geen hype. De kortste weg naar het echte antwoord.</div>
+          </div>
+        </div>
+
+        <div class="voice-row">
+          <div class="voice-dot"></div>
+          <div>
+            <div class="voice-title">Menselijk</div>
+            <div class="voice-text">Elke tekst voelt geschreven, niet gegenereerd. Soms een onvolmaakte zin. Dat is bewust.</div>
+          </div>
+        </div>
+
+        <div class="voice-row">
+          <div class="voice-dot"></div>
+          <div>
+            <div class="voice-title">Rustig zelfvertrouwen</div>
+            <div class="voice-text">Niet schreeuwerig, niet aanmatigend. Aanwezig zonder te duwen.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Menselijke details -->
+    <div class="p2-details">
+      <div class="section-label">Menselijke details</div>
+      <div class="details-list">
+        <div class="detail-row"><div class="detail-dot"></div><div class="detail-text">Handgeschreven naam onderaan content</div></div>
+        <div class="detail-row"><div class="detail-dot"></div><div class="detail-text">PS in emails. Altijd persoonlijk.</div></div>
+        <div class="detail-row"><div class="detail-dot"></div><div class="detail-text">Handgeschreven notitie bij voorstellen</div></div>
+        <div class="detail-row"><div class="detail-dot"></div><div class="detail-text">Voice memo in plaats van lange tekst</div></div>
+        <div class="detail-row"><div class="detail-dot"></div><div class="detail-text">Onregelmatige verzendtijden</div></div>
+        <div class="detail-row"><div class="detail-dot"></div><div class="detail-text">Referentie naar eerder gesprek. Nooit generiek.</div></div>
+      </div>
+    </div>
+
+    <!-- Visuele elementen -->
+    <div class="p2-elements">
+      <div class="section-label">Visuele elementen</div>
+      <div class="elements-row">
+
+        <div class="el-item">
+          <div class="el-demo">
+            <div style="display:flex;gap:6px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#6AAE7A;"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#EAF5EC;border:1px solid #D0DCD0;"></div>
+              <div style="width:8px;height:8px;border-radius:50%;border:1px solid #D0DCD0;"></div>
+            </div>
+          </div>
+          <div class="el-name">Dots</div>
+        </div>
+
+        <div class="el-item">
+          <div class="el-demo">
+            <div style="padding:5px 12px;border-radius:100px;background:#EAF5EC;color:#2A6A3A;font-size:11px;font-weight:400;border:1px solid #D0EDD8;">Live</div>
+          </div>
+          <div class="el-name">Pill</div>
+        </div>
+
+        <div class="el-item">
+          <div class="el-demo">
+            <div style="border-left:2px solid #6AAE7A;padding-left:12px;font-size:11px;font-weight:300;color:#5A6A5A;line-height:1.6;">Telefoon beantwoord,<br>stoel bezet.</div>
+          </div>
+          <div class="el-name">Citaat</div>
+        </div>
+
+        <div class="el-item">
+          <div class="el-demo" style="padding:0 12px;">
+            <div style="background:#F4F6F4;border:1px solid #E5EDE5;border-radius:8px;padding:8px 12px;width:100%;display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:11px;font-weight:300;color:#0D0D0D;">Notift Calls</span>
+              <span style="font-size:13px;color:#6AAE7A;">→</span>
+            </div>
+          </div>
+          <div class="el-name">Bridge card</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bridge voorbeeld -->
+    <div class="p2-bridge">
+      <div class="bridge-card">
+        <div>
+          <div class="bridge-label">Probeer het zelf</div>
+          <div class="bridge-title">Notift Calls</div>
+          <div class="bridge-desc">Bel 085 30 30 200 en ervaar de AI-telefonist.</div>
+        </div>
+        <div class="bridge-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Dark tagline -->
+    <div class="tagline-section">
+      <div class="big-tagline">
+        Telefoon beantwoord.<br><em>Stoel bezet.</em>
+      </div>
+      <div class="footer-right">
+        <div class="footer-name">Notift Calls · leonboltendal.nl</div>
+        <div class="footer-page">02 / 02</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /brandbook/
+Disallow: /calls/
 
 Sitemap: https://leonboltendal.nl/sitemap.xml
