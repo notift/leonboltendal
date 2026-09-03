@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════
-   Leon Boltendal — main.js
+   Leon Boltendal, main.js
    ════════════════════════════════════════ */
 
 (function () {
